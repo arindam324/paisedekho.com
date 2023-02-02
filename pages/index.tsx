@@ -2,6 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Layout from "@components/Layout";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+
+import { Cards } from "../data/cards";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +34,27 @@ const Home: NextPage = () => {
             >
               Get Free Credit Report
             </button>
+          </div>
+        </div>
+        <div className="mt-10">
+          <p className="text-lg text-[#004AAD] font-semibold">
+            Credit Products
+          </p>
+
+          <div className="grid grid-cols-4  gap-5">
+            {Cards.map((item) => (
+              <div className="shadow-lg space-y-4 p-5 rounded-md" key={item.id}>
+                <h2 className="text-lg  font-semibold">{item.name}</h2>
+                <p className="text-sm">{item.description}</p>
+
+                <div className="my-auto flex items-center space-x-2">
+                  <p className="text-sm text-[#004AAD] cursor-pointer hover:underline">
+                    {item.tag}
+                  </p>
+                  <ArrowLongRightIcon className="h-5 text-[#004AAD]" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Layout>
