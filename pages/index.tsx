@@ -5,6 +5,10 @@ import Layout from "@components/Layout";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 import { Cards } from "../data/cards";
+import Lottie from "react-lottie-player";
+
+import Animations1 from "../public/animations/anim1.json";
+import Animations2 from "../public/animations/anim2.json";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +20,14 @@ const Home: NextPage = () => {
 
       <Layout>
         <div className="bg-gray-200 flex items-center gap-10 w-[1280px] relative -z-20 h-[350px] rounded-lg">
-          <div className="w-1/3"></div>
+          <div className="w-1/3 relative">
+            <Lottie
+              play
+              loop
+              animationData={Animations1}
+              className="w-[250px] h-[350px]"
+            />
+          </div>
           <div className="w-2/3">
             <h2 className="text-3xl font-semibold leading-10 text-[#004AAD]">
               Your Credit Score & report <br />
@@ -55,6 +66,15 @@ const Home: NextPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div>
+            <Lottie
+              play
+              loop
+              animationData={Animations2}
+              className="w-full h-[300px]"
+            />
           </div>
         </div>
       </Layout>

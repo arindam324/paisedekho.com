@@ -6,7 +6,7 @@ import Popover from "./Popover";
 
 const Header = () => {
   return (
-    <header className="h-20 fixed top-0 w-full">
+    <header className="h-20 fixed bg-white top-0 w-full">
       <div className="max-w-[1280px] flex items-center justify-between w-full mx-auto">
         <div className="flex items-center space-x-8">
           <Image src={Logo} className="w-60 h-20" alt="logo" />
