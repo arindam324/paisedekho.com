@@ -17,26 +17,44 @@ const Header = () => {
                   className="hover:border-b-2 transition duration-100 ease-out border-indigo-600 "
                   href="/analytics"
                 >
-                  Home Loan
+                  Loans
                 </a>
                 <a
                   className="hover:border-b-2  transition duration-100 ease-out border-indigo-600 "
                   href="/engagement"
                 >
-                  Personal Loan
+                  Credit cards
                 </a>
                 <a
                   className="hover:border-b-2  transition duration-100 ease-out border-indigo-600 "
                   href="/security"
                 >
-                  Pay Now Buy Later
+                  Insurance
+                </a>
+                <a
+                  className="hover:border-b-2  transition duration-100 ease-out border-indigo-600 "
+                  href="/security"
+                >
+                  Investment & Banking
                 </a>
               </div>
             </Popover>
             <Popover name="Tools">
               <div className="grid grid-cols-2 gap-4">
                 <a className="hover:border-b-2 border-indigo-600 " href="/">
-                  check if you are ellgible for Loan
+                  Personal Loan EMI Calculator
+                </a>
+                <a className="hover:border-b-2 border-indigo-600 " href="/">
+                  Car Loan EMI Calculator
+                </a>
+                <a className="hover:border-b-2 border-indigo-600 " href="/">
+                  Income Tax Calculator
+                </a>
+                <a className="hover:border-b-2 border-indigo-600 " href="/">
+                  Home Loan EMI Calculator
+                </a>
+                <a className="hover:border-b-2 border-indigo-600 " href="/">
+                  FAQ
                 </a>
               </div>
             </Popover>
@@ -44,7 +62,22 @@ const Header = () => {
               className="hover:border-b text-sm font-medium border-indigo-600 "
               href="/"
             >
+              About us
+            </a>
+            <a
+              className="hover:border-b text-sm font-medium border-indigo-600 "
+              href="/"
+            >
+              Partner with us
+            </a>
+            <a
+              className="hover:border-b text-sm font-medium border-indigo-600 "
+              href="/"
+            >
               Contact us
+            </a>
+            <a className=" text-sm font-medium link_hover " href="/">
+              Credit Report
             </a>
           </nav>
         </div>

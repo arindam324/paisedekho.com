@@ -2,15 +2,22 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Layout from "@components/Layout";
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import Card from "@components/Card";
 
-import { Cards } from "../data/cards";
 import Lottie from "react-lottie-player";
 
+import { Cards } from "../data/cards";
 import Animations1 from "../public/animations/anim1.json";
 import Animations2 from "../public/animations/anim2.json";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [ishovered, setHovered] = useState<number | null>(null);
+
+  const handdleMouseEnter = (index: number) => {
+    setHovered(index);
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
       <Head>
@@ -52,26 +59,24 @@ const Home: NextPage = () => {
             Credit Products
           </p>
 
-          <div className="grid grid-cols-4  gap-5">
-            {Cards.map((item) => (
-              <div className="shadow-lg space-y-4 p-5 rounded-md" key={item.id}>
-                <h2 className="text-lg  font-semibold">{item.name}</h2>
-                <p className="text-sm">{item.description}</p>
-
-                <div className="my-auto flex items-center space-x-2">
-                  <p className="text-sm text-[#004AAD] cursor-pointer hover:underline">
-                    {item.tag}
-                  </p>
-                  <ArrowLongRightIcon className="h-5 text-[#004AAD]" />
-                </div>
-              </div>
+          <div className="grid grid-cols-4 gap-5">
+            {Cards.map((item, index) => (
+              <Card
+                onMouseEnter={() => handdleMouseEnter(index)}
+                onMouseLeave={() => setHovered(null)}
+                key={item.id}
+                className=""
+                name={item.name}
+                animation={item.animationData}
+                description={item.description}
+                tag={item.tag}
+              />
             ))}
           </div>
 
           <div>
             <Lottie
               play
-              loop
               animationData={Animations2}
               className="w-full h-[300px]"
             />
