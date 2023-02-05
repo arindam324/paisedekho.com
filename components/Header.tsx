@@ -6,7 +6,7 @@ import Popover from "./Popover";
 
 const Header = () => {
   return (
-    <header className="h-20 fixed bg-white top-0 w-full">
+    <header className="h-20 border-b fixed z-20 bg-white top-0 w-full">
       <div className="max-w-[1280px] flex items-center justify-between w-full mx-auto">
         <div className="flex items-center space-x-8">
           <Image src={Logo} className="w-60 h-20" alt="logo" />
@@ -76,9 +76,12 @@ const Header = () => {
             >
               Contact us
             </a>
-            <a className=" text-sm font-medium link_hover " href="/">
-              Credit Report
-            </a>
+            <div className="flex items-center space-x-4">
+              <a className=" text-sm font-medium link_hover " href="/">
+                Credit Report
+              </a>
+              <Image src="/images/cibil.png" alt="" width={40} height={40} />
+            </div>
           </nav>
         </div>
 

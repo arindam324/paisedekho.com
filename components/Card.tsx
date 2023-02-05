@@ -28,13 +28,13 @@ const Card: React.FC<CardPorps> = ({
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`shadow-lg ${className} h-[180px] 
+      className={`shadow-lg ${className}  
       relative space-y-4 p-5 rounded-md group `}
     >
-      <div className="flex absolute right-0 -top-12 items-center justify-center hidden group-hover:block">
-        <Lottie play loop animationData={animation} className="w-24 h-24" />
+      <div className="flex  items-center justify-between ">
+        <h2 className="text-lg  font-semibold">{name}</h2>
+        <Lottie play loop animationData={animation} className="w-20 h-20" />
       </div>
-      <h2 className="text-lg  font-semibold">{name}</h2>
       <p className="text-sm">{description}</p>
 
       <div className="my-auto flex items-center space-x-2">

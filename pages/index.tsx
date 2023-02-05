@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
+import Lottie from "react-lottie-player";
 
 import Layout from "@components/Layout";
 import Card from "@components/Card";
-
-import Lottie from "react-lottie-player";
+import Banner from "@components/Banner";
 
 import { Cards } from "../data/cards";
 import Animations1 from "../public/animations/anim1.json";
 import Animations2 from "../public/animations/anim2.json";
-import { useState } from "react";
 
 const Home: NextPage = () => {
   const [ishovered, setHovered] = useState<number | null>(null);
@@ -26,6 +26,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout>
+        <Banner />
         <div className="bg-gray-200 flex items-center gap-10 w-[1280px] relative -z-20 h-[350px] rounded-lg">
           <div className="w-1/3 relative">
             <Lottie
@@ -59,7 +60,7 @@ const Home: NextPage = () => {
             Credit Products
           </p>
 
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid  grid-cols-4 gap-10">
             {Cards.map((item, index) => (
               <Card
                 onMouseEnter={() => handdleMouseEnter(index)}

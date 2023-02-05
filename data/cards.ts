@@ -6,6 +6,10 @@ import HomeLoans from "../public/animations/HomeLoan.json";
 import GoldLoan from "../public/animations/GoldLoan.json";
 import CarLoan from "../public/animations/CarLoan.json";
 import CreditImprovement from "../public/animations/CreditImprovementService.json";
+import Credit from "../public/animations/credit-card.json";
+import InsuranceService from "../public/animations/InsuranceServices.json";
+import StockInvestment from "../public/animations/Stocks&Investment.json";
+import LoanProperty from "../public/animations/LoanAgainstProperty.json";
 
 export const Cards = [
   {
@@ -65,5 +69,33 @@ export const Cards = [
     description: "Instant Small ticket loans to meet your immediate cash needs",
     tag: "Get Instant Loan",
     animationData: CreditImprovement,
+  },
+  {
+    id: 8,
+    name: "Credit Loan",
+    description: "Instant Small ticket loans to meet your immediate cash needs",
+    tag: "Get Instant Loan",
+    animationData: Credit,
+  },
+  {
+    id: 9,
+    name: "Insaurence Services",
+    description: "Instant Small ticket loans to meet your immediate cash needs",
+    tag: "Get Instant Loan",
+    animationData: InsuranceService,
+  },
+  {
+    id: 10,
+    name: "Stocks & Investment",
+    description: "Instant Small ticket loans to meet your immediate cash needs",
+    tag: "Get Instant Loan",
+    animationData: StockInvestment,
+  },
+  {
+    id: 11,
+    name: "Loans against Property",
+    description: "Instant Small ticket loans to meet your immediate cash needs",
+    tag: "Get Instant Loan",
+    animationData: LoanProperty,
   },
 ];
