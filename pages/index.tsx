@@ -6,6 +6,7 @@ import Lottie from "react-lottie-player";
 import Layout from "@components/Layout";
 import Card from "@components/Card";
 import Banner from "@components/Banner";
+import Whyus from "@components/WhyUS";
 
 import { Cards } from "../data/cards";
 import Animations1 from "../public/animations/anim1.json";
@@ -83,6 +84,8 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+
+        <Whyus />
       </Layout>
     </div>
   );
