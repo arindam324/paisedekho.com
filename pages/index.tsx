@@ -3,6 +3,8 @@ import Head from "next/head";
 import { useState } from "react";
 import Lottie from "react-lottie-player";
 
+import Cookies from "js-cookie";
+
 import Layout from "@components/Layout";
 import Card from "@components/Card";
 import Banner from "@components/Banner";
