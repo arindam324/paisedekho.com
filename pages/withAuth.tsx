@@ -1,14 +1,15 @@
-import React from "react";
+import React, { ReactElement, ComponentType } from "react";
 import jwt from "jsonwebtoken";
 import Router from "next/router";
 
 import Cookies from "js-cookie";
+import { NextPage, NextComponentType } from "next";
 
 const secret = "secretkey";
 
-const withAuth = (Component) => {
-  return class Authenticated extends React.Component {
-    static async getInitialProps(ctx) {
+const withAuth = <T extends {}>(Component: NextComponentType<T>) => {
+  return class Authenticated extends React.Component<T> {
+    static async getInitialProps(ctx: any) {
       const token = Cookies.get("token");
 
       if (token) {
@@ -32,14 +33,16 @@ const withAuth = (Component) => {
         }
       }
 
-      const pageProps =
-        Component.getInitialProps && (await Component.getInitialProps(ctx));
+      let pageProps;
+      if (Component.getInitialProps) {
+        pageProps = await Component.getInitialProps(ctx);
+      }
 
       return { ...pageProps };
     }
 
     render() {
-      return <Component {...this.props} />;
+      return <Component {...(this.props as T)} />;
     }
   };
 };
