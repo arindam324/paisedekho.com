@@ -2,16 +2,16 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <section className="mt-10 flex space-x-4  ">
-      <div className="w-1/3 py-5">
-        <h2 className="text-3xl leading-normal  text-blue-900">
+    <section className="lg:mt-10 flex flex-col lg:flex-row space-x-4  ">
+      <div className="lg:w-1/3 py-5">
+        <h2 className="lg:text-3xl text-xl  leading-normal  text-blue-900">
           Compare,Choose and Apply for personal credit products on Paisedekho
         </h2>
         <button className="px-10 py-2 bg-blue-800 text-white rounded-md mt-4">
           Read More
         </button>
       </div>
-      <div className="w-2/3 grid grid-cols-2 gap-10">
+      <div className="lg:w-2/3 grid grid-cols-2 gap-10">
         <div>
           <h2 className="text-[#004AAD] text-2xl font-bold">
             Personalized Offer

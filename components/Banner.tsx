@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="shadow-lg mb-4 p-5 rounded-lg">
+    <div className="shadow-lg w-full  mb-4 p-5 rounded-lg">
       <div className="flex items-center justify-between">
-        <h2 className="text-4xl text-blue-800 font-semibold">
+        <h2 className="lg:text-4xl text-2xl text-blue-800 font-semibold">
           Check your CIBIL SCORE NOW
         </h2>
         <Image

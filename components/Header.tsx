@@ -4,13 +4,22 @@ import Image from "next/image";
 import Logo from "../public/images/Header_New.svg";
 import Popover from "./Popover";
 
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="h-20 border-b fixed z-20 bg-white top-0 w-full">
       <div className="max-w-[1280px] flex items-center justify-between w-full mx-auto">
         <div className="flex items-center space-x-8">
-          <Image src={Logo} className="w-60 h-20" alt="logo" />
-          <nav className="space-x-10 flex ">
+          <Link href={"/"}>
+            <Image
+              src={Logo}
+              priority={true}
+              className="w-60 h-20"
+              alt="logo"
+            />
+          </Link>
+          <nav className="space-x-10  hidden lg:flex">
             <Popover name="Products">
               <div className="grid grid-cols-2 gap-10">
                 <a
@@ -58,12 +67,12 @@ const Header = () => {
                 </a>
               </div>
             </Popover>
-            <a
+            <Link
               className="hover:border-b text-sm font-medium border-indigo-600 "
-              href="/"
+              href="/about"
             >
               About us
-            </a>
+            </Link>
             <a
               className="hover:border-b text-sm font-medium border-indigo-600 "
               href="/"

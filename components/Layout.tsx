@@ -1,12 +1,16 @@
 import React, { ReactNode } from "react";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => {
   return (
     <main className="">
       <Header />
-      <div className="max-w-[1280px] py-24 w-full mx-auto">{children}</div>
+      <div className="lg:max-w-[1280px] px-5  flex flex-col items-center py-24 w-full mx-auto">
+        {children}
+      </div>
+      <Footer />
     </main>
   );
 };
