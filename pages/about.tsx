@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div className="flex w-full min-h-screen  flex-col">
       <Layout>
-        <h2 className="text-3xl mt-12 font-semibold text-[#004AAD]">
+        <h2 className="lg:text-3xl text-xl mt-12 font-semibold text-[#004AAD]">
           We make personal finance easy, convenient & transparent
         </h2>
-        <p className="text-gray-400 text-lg w-[70%] mt-4 leading-8">
+        <p className="text-gray-400 lg:text-lg   lg:w-[70%] mt-4 leading-8">
           Using data and technology innovations, we help you choose the
           most-suited financial products. Our algorithm-based technology
           platform provides you with access to multiple personal credit offers,
@@ -16,8 +16,8 @@ const About = () => {
           From application to disbursal, Paisabazaar will accompany you at each
           step, till the disbursal of loan or issuance of credit card.
         </p>
-        <div className="grid grid-cols-3 gap-20 mt-8">
-          <div className="shadow-lg hover:-translate-y-8 h-[350px] duration-100 ease-out cursor-pointer transition shadow-gray-300 rounded-lg  p-10">
+        <div className="grid gric-cols-1 lg:grid-cols-3 lg:gap-20 gap-5 mt-8">
+          <div className="shadow-lg hover:-translate-y-8 lg:h-[350px] duration-100 ease-out cursor-pointer transition shadow-gray-300 rounded-lg  p-10">
             <h2 className="text-[#004AAD]  text-lg font-bold leading-relaxed">
               India's larger consumer credit marketplace
             </h2>

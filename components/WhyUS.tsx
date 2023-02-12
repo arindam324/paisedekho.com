@@ -52,7 +52,11 @@ const WhyUs = () => {
       </div>
       <div className="lg:w-2/3 md:-w-[500px]  place-items-center md:mx-auto grid grid-cols-2 gap-10">
         {DATA.map((item) => (
-          <Card title={item.title} description={item.description} />
+          <Card
+            key={item.id}
+            title={item.title}
+            description={item.description}
+          />
         ))}
       </div>
     </section>
