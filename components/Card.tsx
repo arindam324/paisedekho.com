@@ -29,9 +29,9 @@ const Card: React.FC<CardPorps> = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       className={`shadow-lg shadow-blue-200 ${className}  
-      relative space-y-4 lg:p-5 p-3 rounded-md group `}
+       space-y-4 lg:p-5 p-3 rounded-md group `}
     >
-      <div className="flex flex-col-reverse max-w-[100px] lg:max-w-[1280px] w-full lg:flex-row items-center justify-between ">
+      <div className="flex flex-col-reverse   lg:max-w-[1280px] w-full lg:flex-row items-center justify-between ">
         <h2 className="lg:text-lg text-xs text-center mt-2 lg:mt-0 font-semibold">
           {name}
         </h2>
