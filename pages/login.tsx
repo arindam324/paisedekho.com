@@ -10,7 +10,6 @@ import Router from "next/router";
 const Login = () => {
   const form = useForm({
     initialValues: {
-      name: "",
       email: "",
       password: "",
     },
@@ -23,24 +22,25 @@ const Login = () => {
         onSubmit={form.onSubmit(async (values) => {
           try {
             const data = await axios.post("/api/login", {
-              name: values.name,
               email: values.email,
               password: values.password,
             });
+            const isAdmin = data.data.user.role === "Admin";
+
             Cookies.set("token", data.data.accessToken, { expires: 30 });
-            Router.push("/admin/dashboard");
+            Cookies.set("isAdmin", data.data.user.role, {
+              expiresIn: "7d",
+            });
+            if (isAdmin) {
+              Router.push("/admin/dashboard");
+            } else {
+              Router.push("/");
+            }
           } catch (err) {
             console.error(err);
           }
         })}
       >
-        <TextInput
-          withAsterisk
-          label="Full name"
-          placeholder="Jhon doe"
-          {...form.getInputProps("name")}
-        />
-
         <TextInput
           withAsterisk
           mt="md"
