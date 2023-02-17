@@ -29,8 +29,9 @@ const Login = () => {
 
             Cookies.set("token", data.data.accessToken, { expires: 30 });
             Cookies.set("isAdmin", data.data.user.role, {
-              expiresIn: "7d",
+              expires: 30,
             });
+
             if (isAdmin) {
               Router.push("/admin/dashboard");
             } else {
@@ -44,6 +45,7 @@ const Login = () => {
         <TextInput
           withAsterisk
           mt="md"
+          type={"emai"}
           label="Email Address"
           placeholder="abc@gmail.com"
           {...form.getInputProps("email")}

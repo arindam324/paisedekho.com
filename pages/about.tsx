@@ -16,7 +16,7 @@ const About = () => {
           From application to disbursal, Paisabazaar will accompany you at each
           step, till the disbursal of loan or issuance of credit card.
         </p>
-        <div className="grid gric-cols-1 lg:grid-cols-3 lg:gap-20 gap-5 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-20 gap-5 mt-8">
           <div className="shadow-lg hover:-translate-y-8 lg:h-[350px] duration-100 ease-out cursor-pointer transition shadow-gray-300 rounded-lg  p-10">
             <h2 className="text-[#004AAD]  text-lg font-bold leading-relaxed">
               India's larger consumer credit marketplace

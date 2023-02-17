@@ -19,3 +19,10 @@ enum Role {
   Admin
   User
 }
+
+model Products {
+  id           String @id @unique @default(uuid())
+  title        String
+  description  String
+  redirectText String
+}

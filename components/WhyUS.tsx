@@ -41,7 +41,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="lg:mt-10 flex items-center flex-col lg:flex-row space-x-4  ">
+    <section className="lg:mt-10 flex items-center lg:pb-24  flex-col lg:flex-row space-x-4  ">
       <div className="lg:w-1/3 py-10">
         <h2 className="md:text-3xl text-xl leading-normal md:leading-10 text-blue-900">
           Compare,Choose and Apply for personal credit products on Paisedekho

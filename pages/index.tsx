@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             <p className="text-sm md:text-lg md:leading-7 text-zinc-600 font-semibold pt-2 leading-4 lg:leading-6">
               Your Credit Score is more than a number . It's the key to help you
               unlock the best loans & credit card offers avaliable
-            </p>
+          </p>
             <button
               onClick={() => alert("hello")}
               className="bg-[#004AAD] text-white  relative z-50 px-10 py-2 rounded-md cursor-pointer  mt-4"
