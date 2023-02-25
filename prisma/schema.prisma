@@ -10,6 +10,7 @@ datasource db {
 model User {
   id       String @id @unique @default(uuid())
   name     String
+  image    String @default("https://i.pravatar.cc/150?img=68")
   email    String @unique
   password String
   role     Role   @default(User)
@@ -25,4 +26,10 @@ model Products {
   title        String
   description  String
   redirectText String
+}
+
+model WhyUs {
+  id          String @id @default(uuid())
+  title       String
+  description String
 }

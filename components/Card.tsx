@@ -4,6 +4,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import Lottie from "react-lottie-player";
 
 import Animation3 from "../public/animations/personalLoan.json";
+import useLottieAnimation from "../hooks/useLottieAnimation";
 
 type CardPorps = {
   name: string;
@@ -12,7 +13,7 @@ type CardPorps = {
   onMouseEnter: () => void;
   onMouseLeave: () => void;
   className: string;
-  animation: object;
+  animation: string;
 };
 
 const Card: React.FC<CardPorps> = ({
@@ -24,6 +25,7 @@ const Card: React.FC<CardPorps> = ({
   className,
   animation,
 }) => {
+  const animationData = useLottieAnimation(animation);
   return (
     <div
       onMouseEnter={onMouseEnter}
@@ -35,12 +37,14 @@ const Card: React.FC<CardPorps> = ({
         <h2 className="lg:text-lg text-xs text-center mt-2 lg:mt-0 font-semibold">
           {name}
         </h2>
-        <Lottie
-          play
-          loop
-          animationData={animation}
-          className=" h-10 w-10 lg:w-24 lg:h-24"
-        />
+        {animationData && (
+          <Lottie
+            play
+            loop
+            animationData={animationData}
+            className=" h-10 w-10 lg:w-24 lg:h-24"
+          />
+        )}
       </div>
       <p className="text-sm hidden  lg:block">{description}</p>
 
