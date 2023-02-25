@@ -16,6 +16,7 @@ const options = {
     }),
   ],
   adapters: PrismaAdapter(prisma),
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(options);
