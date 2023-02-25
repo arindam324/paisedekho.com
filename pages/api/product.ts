@@ -9,8 +9,8 @@ export default async function handler(
   const { id } = req.query;
   if (id) {
     try {
-      const response = await deleteDocument("products", id[0].toString());
-      res.status(200).json(response);
+      // const response = await deleteDocument("products", id[0].toString());
+      // res.status(200).json(response);
     } catch (err) {
       res.status(400).json(err);
     }

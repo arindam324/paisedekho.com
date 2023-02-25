@@ -7,7 +7,6 @@ import Lottie from "react-lottie-player";
 import useLottieAnimation from "../hooks/useLottieAnimation";
 
 import { state } from "../data/State";
-import animation from "../public/animations/partnership.json";
 
 const PartnerWithUs = () => {
   const {
@@ -37,7 +36,7 @@ const PartnerWithUs = () => {
             <Lottie
               play
               loop
-              animationData={animation}
+              animationData={animationData}
               className="lg:w-[40%] w-[80%]"
             />
           )}
