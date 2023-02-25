@@ -33,3 +33,8 @@ model WhyUs {
   title       String
   description String
 }
+
+model Banner {
+  id  String @id @default(uuid())
+  src String
+}

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import Lottie from "react-lottie-player";
 
-import Animation3 from "../public/animations/personalLoan.json";
 import useLottieAnimation from "../hooks/useLottieAnimation";
 
 type CardPorps = {
