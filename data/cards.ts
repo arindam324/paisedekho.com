@@ -1,16 +1,3 @@
-import Animation3 from "../public/animations/personalLoan.json";
-import BuisnessLoan from "../public/animations/BuisnessLoan.json";
-import BuyNowAnimation from "../public/animations/BuyNowPayLater.json";
-import MicroLoans from "../public/animations/MicroLoans.json";
-import HomeLoans from "../public/animations/HomeLoan.json";
-import GoldLoan from "../public/animations/GoldLoan.json";
-import CarLoan from "../public/animations/CarLoan.json";
-import CreditImprovement from "../public/animations/CreditImprovementService.json";
-import Credit from "../public/animations/credit-card.json";
-import InsuranceService from "../public/animations/InsuranceServices.json";
-import StockInvestment from "../public/animations/Stocks&Investment.json";
-import LoanProperty from "../public/animations/LoanAgainstProperty.json";
-
 export const Cards = [
   {
     id: 0,
