@@ -10,13 +10,13 @@ const Banner = () => {
   const [file, setFile] = useState<File | null>(null);
 
   const BannerUpload = () => {
-    if (file) {
-      Cloudinary.v2.uploader.unsigned_upload(
-        URL.createObjectURL(file),
-        "xrcxywi3",
-        {}
-      );
-    }
+    // if (file) {
+    //   Cloudinary.v2.uploader.unsigned_upload(
+    //     URL.createObjectURL(file),
+    //     "xrcxywi3",
+    //     {}
+    //   );
+    // }
   };
 
   return (
