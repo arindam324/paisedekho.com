@@ -86,7 +86,7 @@ const Card: React.FC<{
 }> = ({ title, description, animation }) => {
   const animationData = useLottieAnimation(animation);
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col justify-between lg:h-auto h-[300px]  items-center">
       {animationData && (
         <Lottie
           play

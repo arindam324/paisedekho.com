@@ -5,7 +5,8 @@ const About = () => {
   return (
     <div className="flex w-full min-h-screen  flex-col">
       <Layout>
-        <h2 className="lg:text-3xl text-xl mt-12 font-semibold text-[#004AAD]">
+        <h2 className={"text-5xl mt-12 text-transparent font-semibold bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text"}>About us</h2>
+        <h2 className="lg:text-3xl text-xl mt-4 font-semibold text-[#004AAD]">
           We make personal finance easy, convenient & transparent
         </h2>
         <p className="text-gray-400 lg:text-lg   lg:w-[70%] mt-4 leading-8">
